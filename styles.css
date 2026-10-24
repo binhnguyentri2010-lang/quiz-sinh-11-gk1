@@ -117,6 +117,10 @@ a {
   outline-offset: 2px;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -716,10 +720,13 @@ a {
 }
 
 .topbar-center-meta {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
   min-width: 0;
+  overflow: hidden;
 }
 
 .lesson-code-tag {
@@ -752,12 +759,13 @@ a {
 
 .stage-counter {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 0.96875rem;
   font-weight: 700;
   color: var(--paper);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
-  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .topbar-right-actions {

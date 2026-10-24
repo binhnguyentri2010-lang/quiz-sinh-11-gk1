@@ -221,7 +221,7 @@
     }
 
     if (state.view === "results") {
-      if (dom.stageCounter) dom.stageCounter.textContent = "Kết quả · " + m.total + " câu";
+      if (dom.stageCounter) dom.stageCounter.textContent = "Kết quả";
       if (dom.leafVeinFill) {
         var rPct = m.total > 0 ? Math.round((m.answeredCount / m.total) * 100) : 0;
         dom.leafVeinFill.style.width = rPct + "%";
