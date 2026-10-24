@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#123C32" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23123C32'/%3E%3Cpath d='M8 22C8 13 15 8 24 8C24 17 19 24 10 24Z' fill='%23B7D96A'/%3E%3Cpath d='M9 23L21 11' stroke='%23123C32' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <title>BIOSPHERE — Ôn tập Sinh học 11 Giữa HKI (2026 - 2027)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="lobby-shell">
+    <header class="poster-masthead">
+      <div class="masthead-top-row">
+        <div class="monograph-mark">
+          <span class="monograph-dot" aria-hidden="true"></span>
+          <span>TÀI LIỆU HỖ TRỢ ÔN TẬP KIỂM TRA GIỮA HỌC KỲ I - SINH HỌC 11 · NĂM HỌC 2026 - 2027</span>
+        </div>
+        <button type="button" id="btn-share-lobby" class="btn-share-masthead">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"></path>
+          </svg>
+          <span>Chia sẻ bộ đề</span>
+        </button>
+      </div>
+
+      <div class="masthead-grid">
+        <div>
+          <h1 class="poster-title">Bàn Soi Tiêu Bản Ôn Tập Giữa Học Kỳ I</h1>
+          <p class="poster-subtitle">
+            Gồm 3 bài trắc nghiệm tách biệt hoàn toàn theo đúng đề cương Sinh học 11. Mỗi bài gồm đủ 3 phần: Trắc nghiệm 4 lựa chọn, Đúng/Sai 4 mệnh đề và Trả lời ngắn — thiết kế gọn để bạn phản xạ nhanh và luyện lại riêng câu sai ngay trước giờ kiểm tra.
+          </p>
+        </div>
+
+        <aside class="masthead-summary-panel" aria-label="Tiến độ riêng từng bài">
+          <div class="overall-stat-row">
+            <span class="overall-stat-label">Sổ theo dõi 3 bài độc lập</span>
+            <span class="overall-stat-badge">Tự động lưu</span>
+          </div>
+          <div class="independent-ledger-list" id="independent-ledger-list">
+            <div class="ledger-lesson-row"><span class="ledger-lesson-name">Bài 1</span><span class="ledger-lesson-val">0 / 27 câu</span></div>
+            <div class="ledger-lesson-row"><span class="ledger-lesson-name">Bài 2</span><span class="ledger-lesson-val">0 / 30 câu</span></div>
+            <div class="ledger-lesson-row"><span class="ledger-lesson-name">Bài 4</span><span class="ledger-lesson-val">0 / 30 câu</span></div>
+          </div>
+          <p class="overall-stat-caption" id="overall-stat-caption">
+            Mỗi chương chấm điểm và tự lưu tiến độ tách biệt trên thiết bị của bạn.
+          </p>
+        </aside>
+      </div>
+    </header>
+
+    <section aria-labelledby="plates-heading">
+      <div class="plates-section-head">
+        <h2 id="plates-heading" class="plates-heading">Chọn 1 Trong 3 Tiêu Bản Chương Độc Lập</h2>
+        <p class="plates-note">Bài 1 (27 câu) · Bài 2 (30 câu) · Bài 4 (30 câu)</p>
+      </div>
+
+      <div id="specimen-plates-grid" class="specimen-plates-grid">
+        <noscript>Bạn vui lòng bật JavaScript để tải dữ liệu câu hỏi Sinh học 11.</noscript>
+      </div>
+    </section>
+
+    <footer class="lobby-footer-guide">
+      <div>
+        <strong>Chế độ bàn soi tập trung:</strong> Bạn có thể bật <em>Phản hồi tức thì</em> để kiểm tra đúng/sai từng câu ngay lập tức, hoặc chuyển sang <em>Thi trọn bài</em> để tự đánh giá tổng thể.
+      </div>
+      <div class="kbd-guide-group" aria-label="Phím tắt bàn phím trên máy tính">
+        <span>Phím tắt máy tính:</span>
+        <span class="kbd-chip">1–4 / A–D</span>
+        <span class="kbd-chip">← / →</span>
+        <span class="kbd-chip">Enter</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="./quiz-data.js"></script>
+  <script src="./biosphere-core.js"></script>
+  <script src="./lobby.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#123C32" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23123C32'/%3E%3Cpath d='M8 22C8 13 15 8 24 8C24 17 19 24 10 24Z' fill='%23B7D96A'/%3E%3Cpath d='M9 23L21 11' stroke='%23123C32' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <title>Bài 2: Trao đổi nước và khoáng ở thực vật — BIOSPHERE Sinh 11</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="stage-page" data-lesson-id="bai-2">
+  <header class="focus-topbar">
+    <div class="topbar-inner">
+      <a href="./index.html" class="btn-back-lobby" aria-label="Quay về sảnh BIOSPHERE">
+        <span aria-hidden="true">←</span>
+        <span>Sảnh</span>
+      </a>
+
+      <div class="topbar-center-meta">
+        <span id="lesson-code-tag" class="lesson-code-tag">Bài 2</span>
+        <span id="lesson-desktop-title" class="lesson-desktop-title">TRAO ĐỔI NƯỚC VÀ KHOÁNG Ở THỰC VẬT</span>
+        <span id="stage-counter" class="stage-counter">Câu 1 / 30</span>
+      </div>
+
+      <div class="topbar-right-actions">
+        <button type="button" id="btn-share-top" class="btn-icon-top" aria-label="Chia sẻ Bài 2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"></path>
+          </svg>
+        </button>
+        <button type="button" id="btn-map-trigger" class="btn-icon-top btn-map-trigger" aria-haspopup="dialog">
+          <span id="map-trigger-label">Bản đồ (0/30)</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="leaf-vein-strip" aria-hidden="true">
+      <div class="leaf-vein-inner">
+        <div id="leaf-vein-track" class="leaf-vein-track">
+          <div id="leaf-vein-fill" class="leaf-vein-fill"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav id="stage-subbar" class="stage-subbar" aria-label="Điều hướng phần thi và chế độ làm bài">
+    <div id="part-pills" class="part-pills"></div>
+    <div class="subbar-right-row">
+      <div id="mode-switch-group" class="mode-switch-group" role="group" aria-label="Chế độ phản hồi"></div>
+      <button type="button" id="btn-submit-inline" class="btn-submit-inline">Nộp bài</button>
+    </div>
+  </nav>
+
+  <div id="drill-banner" class="drill-banner" hidden>
+    <div class="drill-banner-inner">
+      <span id="drill-banner-text" class="drill-banner-text">Đang luyện riêng câu sai</span>
+      <button type="button" id="btn-exit-drill" class="btn-exit-drill">Thoát luyện câu sai</button>
+    </div>
+  </div>
+
+  <main id="focus-main" class="focus-main">
+    <noscript>Bạn vui lòng bật JavaScript để hiển thị bộ câu hỏi Bài 2.</noscript>
+  </main>
+
+  <main id="results-container" class="results-container" hidden></main>
+
+  <footer id="reflex-dock" class="reflex-dock">
+    <div class="reflex-dock-inner">
+      <button type="button" id="btn-prev-q" class="btn-nav-step" aria-label="Câu trước">
+        <span aria-hidden="true">←</span>
+        <span>Trước</span>
+      </button>
+      <button type="button" id="btn-primary-reflex" class="btn-reflex-primary">
+        Kiểm tra đáp án
+      </button>
+      <button type="button" id="btn-next-q" class="btn-nav-step" aria-label="Câu tiếp theo">
+        <span>Tiếp</span>
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </footer>
+
+  <div id="drawer-backdrop" class="drawer-backdrop" hidden>
+    <aside class="question-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer-header">
+        <h2 id="drawer-title" class="drawer-title">Bản đồ 30 câu · Bài 2</h2>
+        <button type="button" id="btn-close-drawer" class="btn-close-drawer">Đóng</button>
+      </div>
+      <div class="drawer-legend" aria-label="Chú giải trạng thái">
+        <span class="legend-item"><span class="legend-swatch sw-current"></span>Đang xem</span>
+        <span class="legend-item"><span class="legend-swatch sw-answered"></span>Đã trả lời</span>
+        <span class="legend-item"><span class="legend-swatch sw-partial"></span>Chọn dở</span>
+        <span class="legend-item"><span class="legend-swatch sw-right"></span>Đúng</span>
+        <span class="legend-item"><span class="legend-swatch sw-wrong"></span>Sai</span>
+        <span class="legend-item"><span class="legend-swatch sw-flag"></span>Đánh dấu</span>
+      </div>
+      <div id="drawer-body" class="drawer-body"></div>
+      <div class="drawer-footer">
+        <button type="button" id="btn-submit-drawer" class="btn-submit-all">Nộp bài &amp; Xem tổng kết</button>
+        <div class="drawer-reset-row">
+          <button type="button" id="btn-reset-drawer" class="btn-reset-lesson">Làm mới bài này từ đầu</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div id="dialog-backdrop" class="modal-backdrop" hidden>
+    <div class="dialog-card" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+      <h2 id="dialog-title" class="dialog-title">Xác nhận</h2>
+      <p id="dialog-desc" class="dialog-desc"></p>
+      <div class="dialog-actions">
+        <button type="button" id="btn-dialog-cancel" class="btn-dialog-cancel">Hủy</button>
+        <button type="button" id="btn-dialog-confirm" class="btn-dialog-confirm">Đồng ý</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="lightbox-backdrop" class="modal-backdrop" hidden>
+    <div class="lightbox-card" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+      <div class="lightbox-toolbar">
+        <span id="lightbox-title" class="lightbox-title">Soi chi tiết sơ đồ</span>
+        <div class="lightbox-controls">
+          <button type="button" class="btn-lightbox is-active" data-lightbox-zoom="fit">Vừa khung</button>
+          <button type="button" class="btn-lightbox" data-lightbox-zoom="actual">Gốc 100%</button>
+          <button type="button" class="btn-lightbox" data-lightbox-zoom="zoom180">180%</button>
+          <button type="button" id="btn-close-lightbox" class="btn-lightbox">Đóng</button>
+        </div>
+      </div>
+      <div id="lightbox-viewport" class="lightbox-viewport">
+        <img id="lightbox-img" alt="Sơ đồ phóng to" />
+      </div>
+      <div id="lightbox-hint" class="lightbox-hint">Chọn mức phóng đại hoặc vuốt ngang để soi rõ ký hiệu trên sơ đồ.</div>
+    </div>
+  </div>
+
+  <script src="./quiz-data.js"></script>
+  <script src="./biosphere-core.js"></script>
+  <script src="./stage.js"></script>
+</body>
+</html>
